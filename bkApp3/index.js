@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 require('dotenv').config()
 
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 8000
 const dbSetup = require('./src/database/setup')
 
 // reoutes
@@ -11,7 +11,7 @@ const bookRoutes = require('./src/routes/bookRoutes')
 
 // SEEDER
 const { seedAdmin } = require("./src/seeders/admin")
-// console.log(seedAdmin());
+console.log(seedAdmin());
 
 // middleware
 app.use(express.urlencoded({ extended: true }))

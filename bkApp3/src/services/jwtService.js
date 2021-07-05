@@ -8,7 +8,8 @@ exports.createToken = (user) => {
                               id: user._id,
                               username: user.username,
                               firstName: user.firstName,
-                              lastName: user.lastName
+                              lastName: user.lastName,
+                              role: user.role
                     }, secret, {expiresIn: expiry});
                     return token
 

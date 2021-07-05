@@ -11,6 +11,8 @@ exports.seedAdmin = () => {
                               return "admin account already exists"
                     }
 
+                    // console.log(password);
+
                     // else cr8 new admin
                     User.create({
                               firstName: "Book",
@@ -25,7 +27,7 @@ exports.seedAdmin = () => {
 
                                         bcrypt.hash(password, salt, (err, hash) => {
                                                   if(err) throw err
-
+                                                  
                                                   user.password = hash
                                                   user.save((err, savedUser) => {
                                                             if(err) throw err
